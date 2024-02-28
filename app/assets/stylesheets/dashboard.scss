@@ -1,0 +1,45 @@
+/* app/assets/stylesheets/welcome.scss */
+
+.welcome-container {
+  text-align: center;
+  margin-top: 50px;
+
+  .button-container {
+    margin-top: 20px;
+
+    .create-event-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px; /* Adjust margin as needed */
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+
+  .logout-container {
+    margin-top: 20px;
+
+    .logout-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f44336;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #d32f2f;
+      }
+    }
+  }
+}

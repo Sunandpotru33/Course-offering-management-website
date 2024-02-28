@@ -1,0 +1,7 @@
+<h1>Enroll in a Course</h1>
+
+<%= form_with model: @enrollment, url: enrollments_path, method: :post do |form| %>
+  <%= form.hidden_field :course_id, value: @course.id %>
+  <p><%= current_user.name %> is enrolling in <%= @course.title %></p>
+  <%= form.submit 'Enroll' %>
+<% end %>

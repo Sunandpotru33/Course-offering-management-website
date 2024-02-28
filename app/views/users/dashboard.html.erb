@@ -1,0 +1,17 @@
+<!-- app/views/users/dashboard.html.erb -->
+
+<h1>Welcome, <%= current_user.name %></h1>
+
+<% if current_user.student? %>
+  <!-- Display enrolled courses for students -->
+  <h2>Your Enrolled Courses</h2>
+  <% current_user.enrollments.each do |enrollment| %>
+    <p><%= enrollment.course.title %></p>
+  <% end %>
+<% elsif current_user.instructor? %>
+  <!-- Display courses taught by the instructor -->
+  <h2>Your Courses</h2>
+  <% current_user.taught_courses.each do |course| %>
+    <p><%= course.title %></p>
+  <% end %>
+<% end %>

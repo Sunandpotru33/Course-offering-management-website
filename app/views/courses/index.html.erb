@@ -1,0 +1,7 @@
+<h1>Courses</h1>
+
+<% @courses.each do |course| %>
+  <h2><%= link_to course.title, course %></h2>
+  <p><%= course.description %></p>
+  <%= link_to 'Enroll', enroll_course_path(course), method: :post %>
+<% end %>

@@ -1,0 +1,13 @@
+<!-- app/views/welcome/index.html.erb -->
+
+<div class="welcome-container">
+  <h1>Course offerings</h1>
+
+  <div class="logout-container">
+    <% if user_signed_in? %>
+      <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-button' %>
+    <% else %>
+      <%= link_to 'Log in', new_user_session_path, class: 'login-button' %>
+    <% end %>
+  </div>
+</div>
